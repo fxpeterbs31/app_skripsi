@@ -501,7 +501,7 @@ if(submit or st.session_state.form_button_clicked):
                     label = 'Download Plot as PNG',                    
                     data = df_theta_nsfd.plot.line(),
                     file_name = name,
-                    mime = 'img/png'
+                    mime = 'image/png'
                 )
 
             with tab_2:
