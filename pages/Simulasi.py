@@ -502,7 +502,7 @@ if(submit or st.session_state.form_button_clicked):
                 plt.title('Torsional NSFD Plot')
                 plt.savefig(name_plot)
 
-                with open(name, 'rb') as img:
+                with open(name_plot, 'rb') as img:
                         btn = st.download_button(
                                 label="Download Plot as PNG",
                                 data=img,
@@ -532,7 +532,7 @@ if(submit or st.session_state.form_button_clicked):
                 plt.title('Torsional Euler Plot')
                 plt.savefig(name_plot)
 
-                with open(name, 'rb') as img:
+                with open(name_plot, 'rb') as img:
                         btn = st.download_button(
                                 label="Download Plot as PNG",
                                 data=img,
@@ -562,7 +562,7 @@ if(submit or st.session_state.form_button_clicked):
                 plt.title('Vertical NSFD Plot')
                 plt.savefig(name_plot)
 
-                with open(name, 'rb') as img:
+                with open(name_plot, 'rb') as img:
                         btn = st.download_button(
                                 label="Download Plot as PNG",
                                 data=img,
@@ -592,7 +592,7 @@ if(submit or st.session_state.form_button_clicked):
                 plt.title('Vertical Euler Plot')
                 plt.savefig(name_plot)
 
-                with open(name, 'rb') as img:
+                with open(name_plot, 'rb') as img:
                         btn = st.download_button(
                                 label="Download Plot as PNG",
                                 data=img,
