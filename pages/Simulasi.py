@@ -501,8 +501,7 @@ if(submit or st.session_state.form_button_clicked):
                 btn_csv = st.download_button(
                     label = 'Download Plot as PNG',                    
                     data = df_theta_nsfd.plot.line(),
-                    file_name = name,
-                    mime = 'image/png'
+                    file_name = name
                 )
 
             with tab_2:
