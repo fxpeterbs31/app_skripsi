@@ -496,13 +496,15 @@ if(submit or st.session_state.form_button_clicked):
             with tab_1:
                 st.line_chart(df_theta_nsfd)
                 name = 'Torsional_NSFD_Plot.png'
+                plt.plot(df_theta_nsfd)
+                plt.savefig(name)
 
-                btn_csv = st.download_button(
-                    label = 'Download Plot as PNG',                    
-                    data = df_theta_nsfd.plot.line(),
-                    file_name = name,
-                    mime = 'image/png'
-                )
+                # btn_csv = st.download_button(
+                #     label = 'Download Plot as PNG',                    
+                #     data = df_theta_nsfd.plot.line(),
+                #     file_name = name,
+                #     mime = 'image/png'
+                # )
 
             with tab_2:
                 _, table, _ = st.columns([2.5, 5, 2.5])
