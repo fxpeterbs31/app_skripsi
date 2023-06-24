@@ -2,6 +2,7 @@ import streamlit as st
 import pandas as pd
 import math
 import numpy as np
+import matplotlib.pyplot as plt
 
 st.markdown('# Halaman Input :writing_hand:')
 st.markdown('\n')
