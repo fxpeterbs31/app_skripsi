@@ -495,11 +495,21 @@ if(submit or st.session_state.form_button_clicked):
         if(choose_motion == 'Torsional' and choose_method == 'NSFD'):   
             with tab_1:
                 st.line_chart(df_theta_nsfd)
+                name = 'Torsional_NSFD_Excel.csv'
+
+                btn_csv = st.download_button(
+                    label = 'Download as CSV / Excel',                    
+                    data = df_theta_nsfd.to_csv(),
+                    file_name = name,
+                    mime = 'text/csv'
+                )
 
             with tab_2:
                 _, table, _ = st.columns([2.5, 5, 2.5])
                 with table:
                     st.dataframe(df_theta_nsfd_to_display, width = 280)
+
+                plt.savefig('Torsional_NSFD_Plot.png')
 
         elif(choose_motion == 'Torsional' and choose_method == 'Euler'):
             with tab_1:
