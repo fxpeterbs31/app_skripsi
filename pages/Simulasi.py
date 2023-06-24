@@ -515,7 +515,7 @@ if(submit or st.session_state.form_button_clicked):
                 with table:
                     st.dataframe(df_theta_nsfd_to_display, width = 280)
 
-                name_table = 'Torsional NSFD Excel'
+                name_table = 'Torsional NSFD Excel.csv'
                 btn_csv = st.download_button(
                     label = 'Download Table as CSV / Excel',                    
                     data = df_theta_nsfd.to_csv(),
@@ -545,7 +545,7 @@ if(submit or st.session_state.form_button_clicked):
                 with table:
                     st.dataframe(df_theta_euler_to_display, width = 280)
 
-                name_table = 'Torsional Euler Excel'
+                name_table = 'Torsional Euler Excel.csv'
                 btn_csv = st.download_button(
                     label = 'Download Table as CSV / Excel',                    
                     data = df_theta_euler.to_csv(),
@@ -575,7 +575,7 @@ if(submit or st.session_state.form_button_clicked):
                 with table:
                     st.dataframe(df_y_nsfd_to_display, width = 280)
 
-                name_table = 'Vertical NSFD Excel'
+                name_table = 'Vertical NSFD Excel.csv'
                 btn_csv = st.download_button(
                     label = 'Download Table as CSV / Excel',                    
                     data = df_y_nsfd.to_csv(),
@@ -605,7 +605,7 @@ if(submit or st.session_state.form_button_clicked):
                 with table:
                     st.dataframe(df_y_euler_to_display, width = 280)
 
-                name_table = 'Vertical Euler Excel'
+                name_table = 'Vertical Euler Excel.csv'
                 btn_csv = st.download_button(
                     label = 'Download Table as CSV / Excel',                    
                     data = df_y_euler.to_csv(),
