@@ -499,6 +499,7 @@ if(submit or st.session_state.form_button_clicked):
                 name = 'Torsional_NSFD_Plot.png'
 
                 plt.plot(df_theta_nsfd)
+                plt.title('Torsional NSFD Plot')
                 plt.savefig(name)
 
                 with open(name, 'rb') as img:
