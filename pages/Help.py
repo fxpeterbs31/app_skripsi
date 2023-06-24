@@ -32,7 +32,7 @@ st.write(
 )
 st.markdown('#### 3.1 Input')
 
-img = Image.open('D:\Skripsi\Python\Screenshot 2023-06-05 190129.png')
+img = Image.open('Screenshot 2023-06-05 190129.png')
 st.image(img, 
          caption = 'Ilustrasi jembatan gantung tampak depan'
 )
