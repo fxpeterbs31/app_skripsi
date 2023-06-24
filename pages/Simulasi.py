@@ -496,17 +496,17 @@ if(submit or st.session_state.form_button_clicked):
         if(choose_motion == 'Torsional' and choose_method == 'NSFD'):   
             with tab_1:
                 st.line_chart(df_theta_nsfd)
-                name = 'Torsional_NSFD_Plot.png'
+                name_plot = 'Torsional_NSFD_Plot.png'
 
                 plt.plot(df_theta_nsfd)
                 plt.title('Torsional NSFD Plot')
-                plt.savefig(name)
+                plt.savefig(name_plot)
 
                 with open(name, 'rb') as img:
                         btn = st.download_button(
                                 label="Download Plot as PNG",
                                 data=img,
-                                file_name=name,
+                                file_name=name_plot,
                                 mime="image/png"
                         )
 
@@ -515,27 +515,28 @@ if(submit or st.session_state.form_button_clicked):
                 with table:
                     st.dataframe(df_theta_nsfd_to_display, width = 280)
 
+                name_table = 'Torsional NSFD Excel'
                 btn_csv = st.download_button(
                     label = 'Download Table as CSV / Excel',                    
                     data = df_theta_nsfd.to_csv(),
-                    file_name = name,
+                    file_name = name_table,
                     mime = 'text/csv'
                 )
 
         elif(choose_motion == 'Torsional' and choose_method == 'Euler'):
             with tab_1:
                 st.line_chart(df_theta_euler)
-                name = 'Torsional_Euler_Plot.png'
+                name_plot = 'Torsional_Euler_Plot.png'
 
                 plt.plot(df_theta_euler)
                 plt.title('Torsional Euler Plot')
-                plt.savefig(name)
+                plt.savefig(name_plot)
 
                 with open(name, 'rb') as img:
                         btn = st.download_button(
                                 label="Download Plot as PNG",
                                 data=img,
-                                file_name=name,
+                                file_name=name_plot,
                                 mime="image/png"
                         )
 
@@ -544,27 +545,28 @@ if(submit or st.session_state.form_button_clicked):
                 with table:
                     st.dataframe(df_theta_euler_to_display, width = 280)
 
+                name_table = 'Torsional Euler Excel'
                 btn_csv = st.download_button(
                     label = 'Download Table as CSV / Excel',                    
                     data = df_theta_euler.to_csv(),
-                    file_name = name,
+                    file_name = name_table,
                     mime = 'text/csv'
                 )
 
         elif(choose_motion == 'Vertikal' and choose_method == 'NSFD'):
             with tab_1:
                 st.line_chart(df_y_nsfd)
-                name = 'y_NSFD_Plot.png'
+                name_plot = 'y_NSFD_Plot.png'
 
                 plt.plot(df_y_nsfd)
                 plt.title('Vertical NSFD Plot')
-                plt.savefig(name)
+                plt.savefig(name_plot)
 
                 with open(name, 'rb') as img:
                         btn = st.download_button(
                                 label="Download Plot as PNG",
                                 data=img,
-                                file_name=name,
+                                file_name=name_plot,
                                 mime="image/png"
                         )
 
@@ -573,27 +575,28 @@ if(submit or st.session_state.form_button_clicked):
                 with table:
                     st.dataframe(df_y_nsfd_to_display, width = 280)
 
+                name_table = 'Vertical NSFD Excel'
                 btn_csv = st.download_button(
                     label = 'Download Table as CSV / Excel',                    
                     data = df_y_nsfd.to_csv(),
-                    file_name = name,
+                    file_name = name_table,
                     mime = 'text/csv'
                 )
 
         elif(choose_motion == 'Vertikal' and choose_method == 'Euler'):
             with tab_1:
                 st.line_chart(df_y_euler)
-                name = 'y_Euler_Plot.png'
+                name_plot = 'y_Euler_Plot.png'
 
                 plt.plot(df_y_euler)
                 plt.title('Vertical Euler Plot')
-                plt.savefig(name)
+                plt.savefig(name_plot)
 
                 with open(name, 'rb') as img:
                         btn = st.download_button(
                                 label="Download Plot as PNG",
                                 data=img,
-                                file_name=name,
+                                file_name=name_plot,
                                 mime="image/png"
                         )
 
@@ -602,10 +605,11 @@ if(submit or st.session_state.form_button_clicked):
                 with table:
                     st.dataframe(df_y_euler_to_display, width = 280)
 
+                name_table = 'Vertical Euler Excel'
                 btn_csv = st.download_button(
                     label = 'Download Table as CSV / Excel',                    
                     data = df_y_euler.to_csv(),
-                    file_name = name,
+                    file_name = name_table,
                     mime = 'text/csv'
                 )
 
