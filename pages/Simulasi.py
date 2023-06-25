@@ -5,7 +5,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 from PIL import Image
 
-st.markdown('# Halaman Simulasi :writing_hand:')
+st.markdown('# Halaman Simulasi :chart_with_upwards_trend:')
 st.markdown('\n')
 
 img = Image.open('Screenshot 2023-06-05 190129.png')
