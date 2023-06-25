@@ -3,9 +3,15 @@ import pandas as pd
 import math
 import numpy as np
 import matplotlib.pyplot as plt
+from PIL import Image
 
 st.markdown('# Halaman Input :writing_hand:')
 st.markdown('\n')
+
+img = Image.open('Screenshot 2023-06-05 190129.png')
+st.image(img, 
+         caption = 'Ilustrasi jembatan gantung tampak depan'
+)
 
 # st.markdown('Ini isinya form inputan')
 li_inp = []
@@ -17,7 +23,7 @@ def callback_form():
 
 with st.form('form_1'):
     m = st.number_input(
-        label = 'Masukkan Massa Jembatan',
+        label = 'Masukkan Massa Jembatan (kg)',
         min_value = 0,
         value = 2500,
         format = '%d'
@@ -26,7 +32,7 @@ with st.form('form_1'):
     li_inp.append(m)
 
     l = st.number_input(
-        label = 'Masukkan Lebar Jembatan',
+        label = 'Masukkan Lebar Jembatan (m)',
         min_value = 0,
         value = 6,
         format = '%d'
@@ -35,7 +41,7 @@ with st.form('form_1'):
     li_inp.append(l)
 
     k = st.number_input(
-        label = 'Masukkan Konstanta Pegas',
+        label = 'Masukkan Konstanta Pegas (kg/m)',
         min_value = 0,
         value = 1000,
         format = '%d'
@@ -44,7 +50,7 @@ with st.form('form_1'):
     li_inp.append(k)
 
     delta = st.number_input(
-        label = 'Masukkan Konstanta Peredam Pegas',
+        label = 'Masukkan Konstanta Peredam Pegas (kg/m)',
         min_value = 0.0,
         value = 0.01,
         step = 0.0001,
@@ -74,7 +80,7 @@ with st.form('form_1'):
     li_inp.append(h)
 
     theta = st.number_input(
-        label = 'Masukkan Kemiringan awal jembatan',
+        label = 'Masukkan Kemiringan awal jembatan (radian)',
         min_value = 0.0,
         value = 0.01,
         step = 0.01,
@@ -84,7 +90,7 @@ with st.form('form_1'):
     li_inp.append(theta)
 
     v = st.number_input(
-        label = 'Masukkan Kecepatan sudut awal jembatan',
+        label = 'Masukkan Kecepatan sudut awal jembatan (rad/s)',
         min_value = 0.0,
         value = 0.0,
         step = 0.01,
@@ -94,7 +100,7 @@ with st.form('form_1'):
     li_inp.append(v)
 
     y = st.number_input(
-        label = 'Masukkan selisih jarak awal jembatan dan posisi ekuilibrium jembatan',
+        label = 'Masukkan selisih jarak awal jembatan dan posisi ekuilibrium jembatan (m)',
         min_value = 0.0,
         value = 0.0,
         step = 0.01,
@@ -104,7 +110,7 @@ with st.form('form_1'):
     li_inp.append(y)
 
     w = st.number_input(
-        label = 'Masukkan kecepatan awal jembatan',
+        label = 'Masukkan kecepatan awal jembatan (m/s)',
         min_value = 0.0,
         value = 0.0,
         step = 0.01,
