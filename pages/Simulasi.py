@@ -95,7 +95,7 @@ with st.form('form_1'):
     v = st.number_input(
         label = 'Masukkan Kecepatan sudut awal jembatan (rad/s)',
         min_value = None, 
-        value = 0,
+        value = 0.0,
         step = 0.01,
         format = '%f'
     )
