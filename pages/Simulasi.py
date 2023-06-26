@@ -84,6 +84,7 @@ with st.form('form_1'):
 
     theta = st.number_input(
         label = 'Masukkan Kemiringan awal jembatan (radian)',
+        min_value = None, 
         value = 0.0,
         step = 0.01,
         format = '%f'
@@ -93,6 +94,7 @@ with st.form('form_1'):
 
     v = st.number_input(
         label = 'Masukkan Kecepatan sudut awal jembatan (rad/s)',
+        min_value = None, 
         value = 0,
         step = 0.01,
         format = '%f'
@@ -102,6 +104,7 @@ with st.form('form_1'):
 
     y = st.number_input(
         label = 'Masukkan selisih jarak awal jembatan dan posisi ekuilibrium jembatan (m)',
+        min_value = None, 
         value = 0.0,
         step = 0.01,
         format = '%f'
@@ -111,6 +114,7 @@ with st.form('form_1'):
 
     w = st.number_input(
         label = 'Masukkan kecepatan awal jembatan (m/s)',
+        min_value = None, 
         value = 0.0,
         step = 0.01,
         format = '%f'
