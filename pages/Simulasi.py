@@ -166,7 +166,7 @@ if(submit or st.session_state.form_button_clicked):
             st.write('\n\n')
             st.markdown('### **INITIAL VALUE**')
 
-        col_1, col_2, col_3 = st.columns([0.75,0.5,1])
+        col_1, col_2, col_3 = st.columns([0.75,0.35,1])
 
         with col_1:
             st.write(li_params[i])
