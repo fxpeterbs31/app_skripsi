@@ -24,34 +24,37 @@ def callback_form():
 with st.form('form_1'):
     m = st.number_input(
         label = 'Masukkan Massa Jembatan (kg)',
-        min_value = 0,
-        value = 2500,
-        format = '%d'
+        min_value = 0.1,
+        value = 2500.0,
+        step = 0.1,
+        format = '%f'
     )
 
     li_inp.append(m)
 
     l = st.number_input(
         label = 'Masukkan Lebar Jembatan (m)',
-        min_value = 0,
-        value = 6,
-        format = '%d'
+        min_value = 0.1,
+        value = 6.0,
+        step = 0.1,
+        format = '%f'
     )
 
     li_inp.append(l)
 
     k = st.number_input(
         label = 'Masukkan Konstanta Pegas (kg/m)',
-        min_value = 0,
-        value = 1000,
-        format = '%d'
+        min_value = 0.01,
+        value = 1000.0,
+        step = 0.01,
+        format = '%f'
     )
 
     li_inp.append(k)
 
     delta = st.number_input(
         label = 'Masukkan Konstanta Peredam Pegas (kg/m)',
-        min_value = 0.0,
+        min_value = 0.01,
         value = 0.01,
         step = 0.0001,
         format = '%f'
@@ -61,7 +64,7 @@ with st.form('form_1'):
 
     alpha = st.number_input(
         label = 'Masukkan Konstanta Nonlinearitas',
-        min_value = 0.0,
+        min_value = 0.01,
         value = 0.1,
         step = 0.1,
         format = '%f'
@@ -71,7 +74,7 @@ with st.form('form_1'):
 
     h = st.number_input(
         label = 'Masukkan Step Size',
-        min_value = 0.0,
+        min_value = 0.01,
         value = 0.01,
         step = 0.01,
         format = '%f'
@@ -81,7 +84,7 @@ with st.form('form_1'):
 
     theta = st.number_input(
         label = 'Masukkan Kemiringan awal jembatan (radian)',
-        min_value = 0.0,
+        min_value = 0.01,
         value = 0.01,
         step = 0.01,
         format = '%f'
@@ -91,7 +94,7 @@ with st.form('form_1'):
 
     v = st.number_input(
         label = 'Masukkan Kecepatan sudut awal jembatan (rad/s)',
-        min_value = 0.0,
+        min_value = 0.01,
         value = 0.0,
         step = 0.01,
         format = '%f'
@@ -101,7 +104,7 @@ with st.form('form_1'):
 
     y = st.number_input(
         label = 'Masukkan selisih jarak awal jembatan dan posisi ekuilibrium jembatan (m)',
-        min_value = 0.0,
+        min_value = 0.01,
         value = 0.0,
         step = 0.01,
         format = '%f'
@@ -111,7 +114,7 @@ with st.form('form_1'):
 
     w = st.number_input(
         label = 'Masukkan kecepatan awal jembatan (m/s)',
-        min_value = 0.0,
+        min_value = 0.01,
         value = 0.0,
         step = 0.01,
         format = '%f'
