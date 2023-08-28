@@ -85,7 +85,7 @@ with st.form('form_1'):
     theta = st.number_input(
         label = 'Masukkan Kemiringan awal jembatan (radian)',
         min_value = None, 
-        value = 0.0,
+        value = 0.01,
         step = 0.01,
         format = '%f'
     )
